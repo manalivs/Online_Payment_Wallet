@@ -1,0 +1,15 @@
+﻿
+
+  <div *ngIf="!_custService.isUserLoggedIn()" class="topnav">
+      <div class="topnav-right">
+        <a routerLink="/welcome_page">Home</a>
+        <a routerLink="/login_page">Login</a>
+        <a routerLink="/register_page">Register</a>
+      </div>
+  </div>
+  <router-outlet></router-outlet>
+  
+
+
+<!-- <app-root></app-root> -->
+

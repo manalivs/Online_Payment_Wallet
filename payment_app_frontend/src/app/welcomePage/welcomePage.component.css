@@ -1,0 +1,17 @@
+ .mybg {
+    /* background: url(https://www.austinwilliams.com/wp-content/uploads/2018/11/Mobile-Wallet-Means-Opportunity-for-Banks.jpg) no-repeat ;   */
+     background: url(https://www.verdict.co.uk/electronic-payments-international/wp-content/uploads/sites/4/2019/11/Top-influencers-in-payments-tech-Q3-2019-770x578.jpg) no-repeat ; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 560px;
+}
+.container{
+    color: white;
+    font-weight: bold;
+    font-family: cursive;
+    margin-left: 225px;
+    
+} 
+

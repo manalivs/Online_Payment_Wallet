@@ -1,0 +1,30 @@
+<div class="panel panel-primary" style="margin-top: 60px; margin-bottom: 160px">
+    <div class="panel-heading">
+      <h2 style="text-align: center">Transaction List</h2>
+    </div>
+    <div class="panel-body" style="margin-top: 30px; margin-left: 60px; margin-right: 60px">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Transaction Date</th>
+            <th>Transaction Time</th>
+            <th>Deposited From</th>
+            <th>Credited To </th>
+            <th>Amount</th>
+            <th>Caption</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let trans of transactions">
+            <td>{{trans.transaction_date}}</td>
+            <td>{{trans.transaction_time}}</td>
+            <td>{{trans.payee}}</td>
+            <td>{{trans.recipient}}</td>
+            <td>{{trans.transfer_amount}}</td>
+            <td>{{trans.caption}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

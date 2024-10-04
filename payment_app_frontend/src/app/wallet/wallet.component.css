@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #151B54;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav-right {
+    float: right;
+  }
+  .mybg{
+      background: url(https://lh3.googleusercontent.com/proxy/fouoNLxVOQv8xftYmDlUzfzcuZCwtjZqPMDS_WXLOVfhSm655lYJNrhfv5DZzJrenRV2DEoPWvRjU51n0UPFK8HuoGON_rRSxbgpx5Eij1aJR3hPigyaJKXDhXGyp-zP6o8) no-repeat;
+      width: 100%;
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+  }

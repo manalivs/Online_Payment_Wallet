@@ -1,0 +1,27 @@
+<!-- <h1 style="text-align: center; padding-top: 100px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+color: white;
+background-color: #AE275F; padding-bottom: 50px">Welcome {{cust1.fullName}}</h1> -->
+<div class="mybg">
+<h5 style="font-family: Arial, Helvetica, sans-serif; margin-left: 10px;margin-top: 5px; font-weight: bold">Hi {{cust1.fullName}}, Welcome.</h5>
+
+<h3 style="text-align: center;font-family: Arial, Helvetica, sans-serif; font-weight: bold; padding-top: 5px">Account Balance:</h3>
+
+<h5 style="text-align-last: center; padding-top: 10px;padding-bottom: 10px; font-weight: bold">{{cust1.balance |currency:'INR'}}</h5>
+ 
+ <div class="topnav">
+  <a routerLink="/wallet_page/accountDetails_page">Account Details</a>
+  <a routerLink="/wallet_page/addMoney_page">Add Money</a>
+  <a routerLink="/wallet_page/withdrawAmount_page">Withdraw Amount</a>
+  <a routerLink="/wallet_page/fundTransfer_page">Fund Transfer</a>
+  <a routerLink="/wallet_page/printTransaction_page">Transaction History</a>
+  <a routerLink="/wallet_page/changePassword_page">Settings</a> 
+  <div class="topnav-right">
+    <a href="/wallet_page/logout_page">Logout</a>
+  </div>
+</div>
+</div> 
+ 
+
+<router-outlet></router-outlet>
+
+

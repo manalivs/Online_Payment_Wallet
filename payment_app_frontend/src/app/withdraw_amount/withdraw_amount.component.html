@@ -1,0 +1,38 @@
+<h2 style="font-family: Arial, Helvetica, sans-serif; text-align: center;margin-top: 35px">Withdraw Amount</h2> 
+<hr style="margin-left: 60px; margin-right: 60px"/>
+
+<div class = " card container-fluid shadow p-3 mb-5 bg-white rounded" style="width: 400px; margin-top: 40px">
+    <form #enForm = "ngForm"  (ngSubmit) = "onSubmit()"> 
+
+        <div class="form-group">
+            <label>Enter Amount: </label>
+            <input type="number" class="form-control" [(ngModel)]="transactionModel.transfer_amount" name="amount"
+            #amt="ngModel" required/>
+            <div *ngIf="amt.invalid && (amt.dirty || amt.touched)" class="text-danger">
+  			<small *ngIf="amt.errors.required">This field is required.</small>
+			</div>
+        </div>
+
+        <div class="form-group">
+            <label> Enter Pin: </label>
+            <input type="password" [(ngModel)]="password" class="form-control" name="password" 
+            #pass="ngModel" required minlength="4"/>
+            <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="text-danger">
+  				<small *ngIf="pass.errors.required">Password is required.</small>
+  				<small *ngIf="pass.errors.minlength"> Password must be at least 4 characters long.</small>
+			</div>          
+        </div>
+
+        <div class="form-group">
+            <label> Enter Caption: </label>
+            <input type="text" [(ngModel)]="transactionModel.caption"  class="form-control" name="caption" 
+            #cap="ngModel" required  />
+            <div *ngIf="cap.invalid && (cap.dirty || cap.touched)" class="text-danger">
+                <small *ngIf="cap.errors.required">This field is required.</small>
+            </div>
+        </div>
+
+        <button class="btn btn-success" type="submit" [disabled] = "enForm.form.invalid">Withdraw</button>
+
+    </form>
+</div>

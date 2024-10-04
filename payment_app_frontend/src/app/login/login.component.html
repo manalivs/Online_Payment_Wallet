@@ -1,0 +1,60 @@
+<div class="login-wrap" style="margin-top: 70px">
+	<div class="login-html login-form">
+		<label style="color: white">Sign In</label>
+		<form #enForm = "ngForm"  (ngSubmit) = "onSubmit()">
+				<div class="sign-in-htm">
+					<div class="group">
+						<label class="label"> Mobile Number: </label>
+						<input type="number" [(ngModel)]="log1.mobileNo" class="form-control input" name="mobileNo" pattern ="^\d{10}$" 
+						#mobile="ngModel" required/>
+						<div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)"
+    						 class="text-danger">
+  							<small *ngIf="mobile.errors.required">Mobile Number is required.</small>
+  							<small *ngIf="mobile.errors.pattern"> Mobile Number must be 10 digits long.</small>
+						</div>
+						
+					</div>
+					<div class="group">
+						<label class="label"> Password: </label>
+						<input type="password" [(ngModel)]="log1.password" class="form-control input" name="password" #pass="ngModel"
+						required minlength="4"/>
+						<div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
+    						 class="text-danger">
+  							<small *ngIf="pass.errors.required">Password is required.</small>
+  							<small *ngIf="pass.errors.minlength"> Password must be at least 4 characters long.</small>
+						</div>
+					</div>
+					<a routerLink="/register_page">New Customer? Create New Account</a><br><br>
+					<div class="hr"></div>
+					<div class="group">
+						<input type="submit" class="button" value="Submit" [disabled] = "enForm.form.invalid">
+					</div>	
+				</div>
+		</form>
+	</div>
+</div>
+
+<!-- <div class = "container-fluid" style="width: 400px; padding-top: 100px">
+    
+    <form #enForm = "ngForm"  (ngSubmit) = "onSubmit()">
+            <div class="form-group">
+                    <label> Mobile Number: </label>
+                    <input type="number" [(ngModel)]="mobNo" class="form-control" name="mobNo" #mobileNo="ngModel"/>
+                    
+                </div>
+
+        <div class="form-group">
+            <label> Password: </label>
+            <input type="password" [(ngModel)]="password" class="form-control" name="password" #pass="ngModel"/>
+        </div>
+
+        <a routerLink="/register_page">New Customer? Create New Account</a><br><br>
+
+
+        <button class="btn btn-primary">Submit</button>
+
+    </form>
+
+</div> -->
+
+
